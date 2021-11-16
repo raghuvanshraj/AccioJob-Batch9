@@ -1,0 +1,46 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int M,Y;
+        Scanner sc = new Scanner(System.in);
+        M = sc.nextInt();
+        if(M==1){
+            System.out.println(31);
+        }
+        else if(M==2){
+            System.out.println(28);
+        }
+        else if(M==3){
+            System.out.println(31);
+        }
+        else if(M==4){
+            System.out.println(30);
+        }
+        else if(M==5){
+            System.out.println(31);
+        }
+        else if(M==6){
+            System.out.println(30);
+        }
+        else if(M==7){
+            System.out.println(31);
+        }
+        else if(M==8){
+            System.out.println(31);
+        }
+        else if(M==9){
+            System.out.println(30);
+        }
+        else if(M==10){
+            System.out.println(31);
+        }
+        else if(M==11){
+            System.out.println(30);
+        }
+        else if (M==12){
+            System.out.println(31);
+        }
+    }
+}

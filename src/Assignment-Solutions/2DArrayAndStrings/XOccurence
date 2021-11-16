@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		//int n=6;
+		//int x=5;
+		int n  =sc.nextInt();
+        int x = sc.nextInt();
+        int i,j;
+        int count = 0;
+        for(i=1;i<=n;i++)
+        for(j=1;j<=n;j++)
+        {
+            long mul = i*j;
+            if(mul==x)
+            count++;
+        }
+
+        System.out.println(count);
+		
+		
+	}
+}

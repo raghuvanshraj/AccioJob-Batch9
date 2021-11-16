@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String str = sc.next();        
+        
+        int aScore = 0,bScore = 0,gScore =0,cScore =0,maxScore=0,i,j;
+
+        String aString="",bString="",cString="";
+
+        for(i=0;i<40;i++){
+            aString = aString+"ABC";
+            bString = bString+"BABC";
+            cString = cString+"CCAABB";
+        }
+        //We have added a b and c strings respectively.....
+        for(i=0;i<n;i++){
+
+            if(aString.charAt(i)==str.charAt(i))
+                aScore++;
+
+            if(bString.charAt(i)==str.charAt(i))
+                bScore++;
+            
+            if(cString.charAt(i)==str.charAt(i))
+                cScore++;
+        }
+        maxScore = Math.max(maxScore,aScore);
+        maxScore = Math.max(maxScore,bScore);
+        maxScore = Math.max(maxScore,cScore);
+
+        System.out.println(maxScore);
+
+        if(maxScore==aScore)
+            System.out.println("Adrian");
+        
+        if(maxScore==bScore)
+            System.out.println("Bruno");
+
+        if(maxScore==cScore)
+            System.out.println("Goran");            
+    }
+}

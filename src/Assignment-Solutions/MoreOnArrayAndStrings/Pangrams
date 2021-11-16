@@ -1,0 +1,26 @@
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String s1 = s.toLowerCase();
+        int count=0;
+        for(int j=97;j<123;j++){
+            for(int i=0;i<s.length();i++){
+                if(s1.charAt(i)==j){
+                   count++;
+                   break;
+                } 
+            }
+        }
+        if (count==26){
+            System.out.println("pangram");
+        }
+        else{
+            System.out.println("not pangram");
+        }
+    }
+}

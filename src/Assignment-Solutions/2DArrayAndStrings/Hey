@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // your code here
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        int count = 0,i,j;
+        int length = str.length();
+        for(i=0;i<length;i++){
+            
+            if(str.charAt(i)=='e')
+            count++;
+            //if(str[i]=='e')
+            //count++;   
+        }
+        //We have been incrementing the count of the char e....
+        count = count*2;
+
+        System.out.print('h');
+        for(i=0;i<count;i++){
+            System.out.print('e');
+        }
+        System.out.println('y');
+
+    }
+}

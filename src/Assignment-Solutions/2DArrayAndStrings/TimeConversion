@@ -1,0 +1,48 @@
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //07:05:45PM
+
+        // if time is in PM
+        String s = sc.next();
+      if(s.charAt(8)=='P'){
+          int hr = Integer.parseInt(s.substring(0,2));
+          hr %=12;
+          hr =hr+12;
+          
+          System.out.print(hr);
+          for(int i=2;i<8;i++){
+              System.out.print(s.charAt(i));
+          }
+          
+      }
+      else{
+          int hr = Integer.parseInt(s.substring(0,2));
+          if(hr==12){
+              System.out.print("00");
+              for(int k=2;k<8;k++){
+                  System.out.print(s.charAt(k));
+              }
+          }
+          else if(hr>=10){
+              for(int j =0;j<8;j++){
+                  System.out.print(s.charAt(j));
+              }
+          }
+          else{
+             System.out.print("0");
+              for(int q=1;q<8;q++){
+                  System.out.print(s.charAt(q));
+              }
+              
+          }
+         
+          }
+      
+    }
+}

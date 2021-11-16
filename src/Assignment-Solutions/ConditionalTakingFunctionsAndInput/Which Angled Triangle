@@ -1,0 +1,28 @@
+
+import java.util.*;
+import java.io.*;
+
+public class Main {
+    public static void main(String args[]) {
+        //your code here
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        a = a*a;
+        b = b*b;
+        c = c*c;
+
+        int ans = 1;
+       
+        if(a==(b+c)||(b==(a+c))||(c==(a+b))){
+            ans = 2;
+        }
+
+        else if(a>(b+c)||b>(a+c)||c>(a+b)){
+            ans = 3;
+        }
+        System.out.println(ans);
+    }
+}

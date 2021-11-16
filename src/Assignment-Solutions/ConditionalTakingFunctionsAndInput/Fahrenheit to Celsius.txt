@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+    static void fahrenheitToCelsius(int f) {
+//        int c = ((f - 32) * 5) / 9;
+        System.out.println(((f - 32) * 5) / 9);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int f = scanner.nextInt();
+        fahrenheitToCelsius(f);
+//        System.out.println(c);
+    }
+}

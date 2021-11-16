@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // your code here
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        int i,j;
+        for(i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+
+        //for each element I will check....keep only this type of element....h
+        //how many other elements should i need to delete....
+
+        int ans = 105;
+        for(i=0;i<n;i++){ //checking each element in the array
+
+            int val = arr[i];
+            int cnt = 0;  //denoting the number of deletions i need to make....
+            for(j=0;j<n;j++){
+                
+                if(arr[j]!=val){
+                    cnt++;
+                }
+            }//this inner loop is helping to keep the count of to be deleted elem
+
+            ans = Math.min(ans,cnt);
+        }
+
+        System.out.println(ans);
+
+    }
+}
