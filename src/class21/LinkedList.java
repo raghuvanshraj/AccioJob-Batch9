@@ -20,6 +20,7 @@ public class LinkedList {
         curr.next = new Node(value);
     }
 
+    // inserting element on some index
     public void add(int index, int value) {
         Node curr = this.head;
         Node prev = null;
@@ -32,6 +33,8 @@ public class LinkedList {
         Node node = new Node(value);
         if (prev != null) {
             prev.next = node;
+        } else {
+            this.head = node;
         }
         node.next = curr;
     }
@@ -40,7 +43,6 @@ public class LinkedList {
         if (this.head == null) {
             return;
         }
-        int value = this.head.value;
         this.head = this.head.next;
     }
 
@@ -57,7 +59,7 @@ public class LinkedList {
             if (prev != null) {
                 prev.next = curr.next;
             } else {
-                this.head = this.head.next;
+                this.remove();
             }
         }
     }
